@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/rsc">
+        <file>black.png</file>
+        <file>blackpotential.png</file>
+        <file>board.png</file>
+        <file>brown.png</file>
+        <file>white.png</file>
+        <file>whitepotential.png</file>
+        <file>redpotential.png</file>
+    </qresource>
+</RCC>
