@@ -28,6 +28,7 @@ I provide 2 version of AI of reverse chess of python and QT(C++), basing on MCTS
 具体算法用伪代码加文字描述如下；
 ##### 2.2.1数据结构
 工程采用面向对象的思想，给MCT的每个节点构造了一个对象，结构如下；
+```c++
 class MCTS {
 public:
 
@@ -48,11 +49,12 @@ float realscore;
     double calculate(); //function to calculate for determining best child
     int bestChild();    //function to get the best child
 };
-
+```
 
 ##### 2.2.2 选择+扩展：treepolicy函数
 在treepolicy函数中完成了对当前MCT的遍历，此处选择做了细微的代码实现上的改变。对节点可扩展性的判定是基于MCT节点中的expandable变量，除根节点外其他节点的该成员变量初始化为true，在代码实现中在treepolicy函数中被初次访问的节点expandable变量会设置为false。
-伪代码如下；
+>伪代码如下；
+```C++
 treepolicy{
 采用层次遍历法，利用队列数据结构，寻找MCT中可扩展节点；
 if can’t find expandable tree:
@@ -63,10 +65,12 @@ Else:
 将选定节点的所有valid子节点加入到MCT中完成扩展；
 将选定节点的expandable设置为false；
 返回选定节点以及下一手的执棋方； }
+```
 
 ##### 2.2.3模拟：defaultpolicy
-伪代码如下；
-此处做了一个优化，最原始的defaultpolicy中，所有选定子之后的落子都是纯随机的。优化过后，选定子之后的落子在随机的基础上加了权重，使得选择角上的子的概率>选择边上的子的概率>选择中间的子的概率。优化的方法在getValidMove函数中，通过改变加入同一个位置的子的个数来改变该落子被随机到的权重。
+>伪代码如下；
+此处做了一个优化，最原始的defaultpolicy中，所有选定子之后的落子都是纯随机的。优化过后，选定子之后的落子在随机的基础上加了权重，使得选择角上的子的概率选择边上的子的概率>选择中间的子的概率。优化的方法在getValidMove函数中，通过改变加入同一个位置的子的个数来改变该落子被随机到的权重。
+```C++
 defaultpolicy{
 while(游戏未结束){
     得到当前状态下valid走子方法；
@@ -78,9 +82,10 @@ while(游戏未结束){
             说明当前状态下双方都无法落子，返回当前棋面的信息；
 }
 返回当前棋面的信息； }
-
+```
 ##### 2.2.4回溯：backup函数
-伪代码如下；
+>伪代码如下；
+```c++
 backup{
 (根据defaultpolicy返回的结果)
 if 棋面上AI方的子不少于对手方的子:
@@ -90,9 +95,11 @@ score = 0;
 根据MCT node的father成员变量，自底向下访问选定子到root的path上的所有节点 node：
 node->score += score;
 Node->visit += 1; }
+```
 
 ##### 2.2.5 蒙特卡洛搜索树：uctSearch函数
-伪代码如下；
+>伪代码如下；
+```c++
 uctSearch{
 获得当前状态所有可能走法；
 处理特殊情况，即可能走法数为0或1的情况；
@@ -106,9 +113,11 @@ while(未超过人为规定时间限制)：
 调用backup根据棋面信息更新部分棋子的统计信息；
     根据棋子的统计信息，返回root的best child
 }
+```
 
 ##### 2.2.6 蒙特卡洛快速出子随机函数：getValidMove函数
-	伪代码如下：
+>伪代码如下：
+```c++
 getValidMove{
 获得当前状态所有可能走法；
 将可能的走法按一定权重存入vector
@@ -116,6 +125,7 @@ getValidMove{
 如果该点是棋盘上非边角，但为边的位置，往vector中存入两次
 其余位置只存入一次
 }
+```
 
 ##### 2.2.7 bestChild的估值函数
     怎么选择bestchild节点？和从前一样：如果轮到黑棋走，就选对于黑棋有利的；如果轮到白棋走，就选对于黑棋最不利的。但不能太贪心，不能每次都只选择“最有利的/最不利的”，因为这会意味着搜索树的广度不够，容易忽略实际更好的选择。
@@ -126,14 +136,14 @@ C可以经过多次测试选取一个合适的值。
 2.3重要函数
 程序主要可以分为三部分；
 第一部分为Qt图形界面，以及监听回调函数；
-```
+```C++
 void DrawBoard(int i); //绘制棋盘
 void paintEvent(QPaintEvent *event); //更新棋盘内容
 void mousePressEvent(QMouseEvent *e);       //鼠标按下事件
 ```
 第二部分为黑白棋的基本逻辑，例如判断棋局是否结束的函数；统计棋面上双方棋子个数的函数；决定或更换当前执棋方的函数等。
 //创建新的棋盘
-```
+```c++
 Board* getNewBoard();
 //拷贝棋盘
 Board* getBoardCopy(Board* board);
@@ -159,7 +169,7 @@ Score getScoreofBoard(Board* board);
 
 第三部分为MCTS的有关函数，是程序的核心部分，主要包括2.2节中给出了伪代码的四个函数，即uctSearch函数及其调用的三个函数。
 //进行蒙特卡洛搜索
-```
+```c++
 Postion uctSearch(MCTS* root, Board* board, int computertile, int DEPTH, double TIME);
 //快速出子
 Score defaultPolicy(Board* board, MCTS* state, int tile);
