@@ -192,31 +192,30 @@ int bestChild();                //function to get the best child
 ### 3.	Experiment Results
 用图文并茂的形式给出实验结果，如系统界面、操作说明、运行结果等，并对实验结果进行总结和说明。
 启动界面：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/1.png" width="50%" height="50%" />
-
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/1.png")
 
 先手问题：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/2.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/2.png")
 
 
 AI 计算时间上限：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/3.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/3.png")
 
 
 开始与重启按钮，以及比分对比
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/4.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/4.png")
 
 
 行动力提示：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/5.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/5.png")
 
 
 最近一步提示：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/6.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/6.png")
 
 
 正常对局：
-<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/7.png" width="50%" height="50%" />
+![img]("https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/7.png")
 
 
 ### References:
