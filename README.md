@@ -192,27 +192,35 @@ int bestChild();                //function to get the best child
 ### 3.	Experiment Results
 用图文并茂的形式给出实验结果，如系统界面、操作说明、运行结果等，并对实验结果进行总结和说明。
 启动界面：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/1.png" width="50%" height="50%" />
 
 
 先手问题：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/2.png" width="50%" height="50%" />
 
 
 AI 计算时间上限：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/3.png" width="50%" height="50%" />
 
 
 开始与重启按钮，以及比分对比
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/4.png" width="50%" height="50%" />
 
 
 行动力提示：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/5.png" width="50%" height="50%" />
 
 
 最近一步提示：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/6.png" width="50%" height="50%" />
 
 
 正常对局：
+<img src="https://github.com/BestOreo/Pic-for-README.md/blob/master/AIChess/7.png" width="50%" height="50%" />
+
 
 ### References:
->* 28 天自制你的 AlphaGo（五）：蒙特卡洛树搜索（MCTS）基础。
-* 详解AlphaGo背后的力量：蒙特卡洛树搜索入门指南 —— 机器之心
-*《双人博弈问题中的蒙特卡洛树搜索算法的改进》 季辉 ， 丁泽军
+>*28 天自制你的 AlphaGo（五）：蒙特卡洛树搜索（MCTS）基础。
+>*详解AlphaGo背后的力量：蒙特卡洛树搜索入门指南 —— 机器之心
+>*《双人博弈问题中的蒙特卡洛树搜索算法的改进》 季辉 ， 丁泽军
 
