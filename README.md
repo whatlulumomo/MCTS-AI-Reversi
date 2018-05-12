@@ -170,11 +170,13 @@ void backup(Board* board, MCTS* bottom, int tile, int computerTile, Score score)
 ```
 
 第四部分是MCTS是蒙特卡洛算法的改进，一是尽量减小MCTS快速出子阶段的纯随机性，但是又不要过重增加计算负担。二是对于一些边角特定位置的估值函数进行略微调整。
+```c++
 // 判定该步是否有效
 vector<Postion> isValidMove(Board* board, int tile, int xstart, int ystart);
 // 获取有效动作的集合，根据位置按不同的权重
 vector<Postion> getValidMove(Board* board, int tile,  bool forpolicy=false);
 int bestChild();                //function to get the best child
+```
 
 ### 3.	Experiment Results
 用图文并茂的形式给出实验结果，如系统界面、操作说明、运行结果等，并对实验结果进行总结和说明。
@@ -199,7 +201,7 @@ AI 计算时间上限：
 正常对局：
 
 ### References:
-λ	28 天自制你的 AlphaGo（五）：蒙特卡洛树搜索（MCTS）基础。
-λ	详解AlphaGo背后的力量：蒙特卡洛树搜索入门指南 —— 机器之心
-λ	《双人博弈问题中的蒙特卡洛树搜索算法的改进》 季辉 ， 丁泽军
+>* 28 天自制你的 AlphaGo（五）：蒙特卡洛树搜索（MCTS）基础。
+* 详解AlphaGo背后的力量：蒙特卡洛树搜索入门指南 —— 机器之心
+*《双人博弈问题中的蒙特卡洛树搜索算法的改进》 季辉 ， 丁泽军
 
