@@ -10,6 +10,12 @@ I provide 2 version of AI of reverse chess of python and QT(C++), basing on MCTS
 ##### 1.2工作分配
 	康自蓉：MCTS算法实现
 	葛帅琦：python，QT图像显示，MCTS算法改进。C++重写黑白棋加速。
+	
+##### 1.3 Run
+```
+python3 chessvisual.py
+```
+
 ### 2.	Technical Details
 内容包括：
 * (1)工程实践当中所用到的理论知识阐述
