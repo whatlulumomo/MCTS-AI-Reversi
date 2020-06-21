@@ -36,5 +36,5 @@ At the end of each game, hisory record will be saved locally with timestamp as f
 
 ##### Game and Review
 
-![Game.gif](Game-by-Record.gif)![Game-by-Record.gif](Game-by-Record.gif)
+![Game.gif](Game.gif)![Game-by-Record.gif](Game-by-Record.gif)
 
