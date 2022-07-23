@@ -7,9 +7,6 @@ I provide 2 version of AI of reverse chess of python and QT(C++), basing on MCTS
 我们写了python和c++两个版本的黑白棋。
 	Python: 3.6
 	C++: g++, QT
-##### 1.2工作分配
-	康自蓉：MCTS算法实现
-	葛帅琦：python，QT图像显示，MCTS算法改进。C++重写黑白棋加速。
 	
 ##### 1.3 Run
 ```
